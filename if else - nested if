@@ -1,1 +1,20 @@
+<script>
+        function cekpredikat() {
+            var IPK = document.getElementById("hasil").value;
+            var hasilpesan;
+            if (IPK >= 200){
+                hasilpesan = "anda memuaskan bro";
+            } else {
+                hasilpesan = "anda sangat memuaskan";
 
+                // contoh if-else bersarang
+            if (IPK < 351) {
+                hasilpesan += "mantap cuy";
+            } else {
+                hasilpesan += "cumlaude bro";
+                }
+            }
+
+            document.getElementById("hasil").textContent = hasilpesan;
+        }
+    </script>
