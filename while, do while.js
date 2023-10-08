@@ -9,3 +9,13 @@
             angkaWhile++;
         }
     </script>
+    <script>
+        var ulDoWhile = document.getElementById("daftarAngkaDoWhile");
+        var angkaDoWhile = 1;
+        do {
+            var liDoWhile = document.createElement("li");
+            liDoWhile.textContent = angkaDoWhile;
+            ulDoWhile.appendChild(liDoWhile);
+            angkaDoWhile++;
+        } while (angkaDoWhile <= 30);
+    </script>
