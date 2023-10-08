@@ -1,0 +1,30 @@
+    <script>
+        function hitung() {
+            //mengambil sebuah nilai dari input dan operator
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 =parseFloat(document.getElementById("angka2").value);
+            var operator = document.getElementById("operator").value;
+
+            //menggunakan struktur dari switch-case untuk melakukan perhitungan
+            var hasil;
+            switch (operator) {
+                case "tambah":
+                    hasil = angka1 + angka2;
+                    break;
+                case "kurang":
+                    hasil = angka1 - angka2;
+                    break;
+                case "kali":
+                    hasil = angka1 * angka2;
+                    break;
+                case "bagi":
+                    hasil = angka1 / angka2;
+                    break;
+                default:
+                    hasil = "operasi tidak valid coy";
+            }
+
+            //menampilkan hasil ke dalam elemen dengan id "hasil"
+            document.getElementById("hasil").textContent = hasil;
+        }
+    </script>
