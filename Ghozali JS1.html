@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas JS ATM</title>
+</head>
+<body>
+    <h1>ASSIGNMENT JAVASCRIPT TEXT</h1>
+    <h2>By:muh alif ghozali</h2>
+    <h3>Contoh Javascript switch case</h3>
+    <p>masukkan sebuah angka dan operasi perhitungan</p>
+
+    <input type="number" id="angka1" placeholder="angka pertama">
+    <input type="number" id="angka2" placeholder="angka kedua">
+    <select id="operator">
+        <option value="tambah">Tambah</option>
+        <option value="kurang">Kurang</option>
+        <option value="kali">Kali</option>
+        <option value="bagi">Bagi</option>
+    </select>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <p>Hasil: <span id="hasil"></span></p>
+
+    <script>
+        function hitung() {
+            //mengambil sebuah nilai dari input dan operator
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 =parseFloat(document.getElementById("angka2").value);
+            var operator = document.getElementById("operator").value;
+
+            //menggunakan struktur dari switch-case untuk melakukan perhitungan
+            var hasil;
+            switch (operator) {
+                case "tambah":
+                    hasil = angka1 + angka2;
+                    break;
+                case "kurang":
+                    hasil = angka1 - angka2;
+                    break;
+                case "kali":
+                    hasil = angka1 * angka2;
+                    break;
+                case "bagi":
+                    hasil = angka1 / angka2;
+                    break;
+                default:
+                    hasil = "operasi tidak valid coy";
+            }
+
+            //menampilkan hasil ke dalam elemen dengan id "hasil"
+            document.getElementById("hasil").textContent = hasil;
+        }
+    </script>
+</body>
+<body>
+    <h1>Contoh Javascript ifelse</h1>
+    <p>masukkan IPK anda: <input type="number" id="Nilai IPK"></p>
+    <button onclick="cekpredikat()">Cek predikat</button>
+    <p id="hasil"></p>
+
+    <script>
+        function cekpredikat() {
+            var IPK = document.getElementById("hasil").value;
+            var hasilpesan;
+            if (IPK >= 200){
+                hasilpesan = "anda memuaskan bro";
+            } else {
+                hasilpesan = "anda sangat memuaskan";
+
+                // contoh if-else bersarang
+            if (IPK < 351) {
+                hasilpesan += "mantap cuy";
+            } else {
+                hasilpesan += "cumlaude bro";
+                }
+            }
+
+            document.getElementById("hasil").textContent = hasilpesan;
+        }
+    </script>
+</body>
+<body>
+    <h1>Contoh javascript for statement</h1>
+
+    <p>Sebuah nilai matakuliah dari 10 hingga 100:</p>
+    <ul id="daftar angka nih"></ul>
+
+    <script>
+        var ul = document.getElementById("daftar angka nih");
+        for (var i = 10; i <=100; i++) {
+            var li = document.createElement("li");
+            li.textContent =i;
+            ul.appendChild(li);
+        }
+    </script>
+<body>
+    <h1>Contoh JavaScript While dan Do-While</h1>
+    
+    <h2>While Loop</h2>
+    <p>Angka dari 1 hingga 20:</p>
+    <ul id="daftarAngkaWhile"></ul>
+    
+    <script>
+        var ulWhile = document.getElementById("daftarAngkaWhile");
+        var angkaWhile = 1;
+
+        while (angkaWhile <= 20) {
+            var liWhile = document.createElement("li");
+            liWhile.textContent = angkaWhile;
+            ulWhile.appendChild(liWhile);
+            angkaWhile++;
+        }
+    </script>
+    
+    <h2>Do-While Loop</h2>
+    <p>Angka dari 1 hingga 30:</p>
+    <ul id="daftarAngkaDoWhile"></ul>
+    
+    <script>
+        var ulDoWhile = document.getElementById("daftarAngkaDoWhile");
+        var angkaDoWhile = 1;
+        do {
+            var liDoWhile = document.createElement("li");
+            liDoWhile.textContent = angkaDoWhile;
+            ulDoWhile.appendChild(liDoWhile);
+            angkaDoWhile++;
+        } while (angkaDoWhile <= 30);
+    </script>
+</body>
+<body>
+    <h1>Contoh Javascript function</h1>
+
+    <p>klik tombol di bawah ini coy please</p>
+
+    <button onclick="tampilkanpesannyacuy()">Tampilkan Pesan</button>"
+
+    <p id="pesan"></p>
+
+    <script>
+        function tampilkanpesannyacuy() {
+            var pesan = "Halo bro, ini adalah pesan dari saya selamat datang coy!";
+            document.getElementById("pesan").textContent = pesan;
+            
+        }
+    </script>
+</body>
+</html>
